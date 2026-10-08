@@ -48,9 +48,9 @@ class Pelicula {
 
 const pelicula1 = new Pelicula("Rio Profundo", 118);
 
-console.log(pelicula1.precioBase);
-console.log(pelicula1.precioBoleta());
-console.log(pelicula1.ficha());
+// console.log(pelicula1.precioBase);
+// console.log(pelicula1.precioBoleta());
+// console.log(pelicula1.ficha());
 
 
 // No borres esta línea: es la puerta por donde el test usa tu clase
