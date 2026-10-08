@@ -31,8 +31,27 @@
 // ============================================================
 
 class Pelicula {
-  // Tu código aquí
+  constructor(titulo, duracion){
+    this.titulo = titulo;
+    this.duracion = duracion;
+    this.precioBase = 15000;
+  }
+
+  precioBoleta(){ 
+    return this.precioBase;
+  }
+
+  ficha(){
+    return `${this.titulo} | ${this.duracion} min | $${this.precioBoleta()}`;
+  }
 }
+
+const pelicula1 = new Pelicula("Rio Profundo", 118);
+
+console.log(pelicula1.precioBase);
+console.log(pelicula1.precioBoleta());
+console.log(pelicula1.ficha());
+
 
 // No borres esta línea: es la puerta por donde el test usa tu clase
 module.exports = { Pelicula };
