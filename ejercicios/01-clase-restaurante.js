@@ -35,8 +35,26 @@
 // ============================================================
 
 class Restaurante {
-  // Tu código aquí
+  constructor(nombre, categoria, calificacion){
+    this.nombre = nombre;
+    this.categoria = categoria;
+    this.calificacion = calificacion;
+  }
+
+  describir(){
+    return `Nombre del restaurante: ${this.nombre} - Categoría del restautante: ${this.categoria} - (calificación del restaurante: ${this.calificacion} estrellas)`;
+  }
+
+  estaBienCalificado(){
+    return this.calificacion >= 4.5;
+  }
 }
+
+const restaurante1 = new Restaurante("La brasa dorada", "Asados", 4.6);
+
+console.log(restaurante1);
+console.log(restaurante1.describir());
+console.log(restaurante1.estaBienCalificado());
 
 // No borres esta línea: es la puerta por donde el test usa tu clase
 module.exports = { Restaurante };
